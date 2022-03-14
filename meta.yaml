@@ -1,0 +1,18 @@
+title:
+  - type: main
+    text: Curso de React
+creator:
+  - role: author
+    text: Marco Bruno
+  - role: editor
+    text: Raphael Freitas Pereira
+author:
+  - name: Marco Bruno
+    affiliation: CollabCode Tech
+  - name: Raphael Freitas Pereira
+    affiliation: CollabCode Tech
+date: 2022-03-03
+lang: pt-BR
+ibooks:
+  version: 1.0.0
+cover-image: img/cover.jpg

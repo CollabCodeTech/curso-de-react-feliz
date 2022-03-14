@@ -1,0 +1,30 @@
+name: Build EPub
+
+on: push
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker://pandoc/core:2.9
+        with:
+          args: >- # allows you to break string into multiple lines
+            --standalone
+            --output=react.epub
+            --metadata title="Curso de React"
+            --metadata pagetitle="Curso de React"
+            --metadata author="Marco Bruno"
+            --metadata author="Raphael Freitas Pereira"
+            --metadata lang="pt-BR"
+            --epub-cover-image img/cover.jpg
+            --epub-metadata meta.yaml
+            modulo-01/README.md
+            modulo-01/modulo-01-exercicio-01.md
+            modulo-01/modulo-01-exercicio-02.md
+            modulo-01/modulo-01-exercicio-03.md
+            modulo-01/modulo-01-exercicio-04.md
+            modulo-01/modulo-01-exercicio-05.md
+            modulo-01/modulo-01-exercicio-06.md
+            modulo-01/modulo-01-exercicio-07.md
+            modulo-01/modulo-01-extra-01.md
